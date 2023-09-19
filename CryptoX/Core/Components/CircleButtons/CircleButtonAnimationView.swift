@@ -12,11 +12,11 @@ struct CircleButtonAnimationView: View {
     
     var body: some View {
         Circle()
-            .stroke(lineWidth: 5.0)
+            .stroke(lineWidth: 4.8)
             .scale(animate ? 1.0 : 0.0)
             .opacity(animate ? 0.0 : 1.0)
-            .animation(animate ? .easeOut(duration: 0.55) : .none, value: animate)
-            .foregroundColor(Color.accentColor)
+            .animation(animate ? .easeOut(duration: 0.58) : .none , value: animate)
+            .foregroundColor(Color.myAccentColor)
     }
 }
 
