@@ -21,12 +21,10 @@ struct CoinRowView: View {
                 middleColumn
             }
             
-            Spacer()
             
             rightColumn
         }
         .font(.subheadline)
-        .padding(.horizontal, 5)
     }
 }
 
