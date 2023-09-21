@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CoinRowView: View {
     let coin: CoinModel
@@ -50,14 +51,20 @@ extension CoinRowView {
                 .foregroundColor(Color.secondaryTextColor)
                 .frame(minWidth: 30)
             
-            AsyncImage(url: URL(string: coin.image)) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
-            } placeholder: {
-                ProgressView()
-            }
+//            will use KingFisher instead for local image caching
+//            AsyncImage(url: URL(string: coin.image)) { image in
+//                image
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 30, height: 30)
+//            } placeholder: {
+//                ProgressView()
+//            }
+            
+            KFImage(URL(string: coin.image))
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30)
 
             
             Text(coin.symbol.uppercased())
