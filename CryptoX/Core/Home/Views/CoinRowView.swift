@@ -50,8 +50,15 @@ extension CoinRowView {
                 .foregroundColor(Color.secondaryTextColor)
                 .frame(minWidth: 30)
             
-            Circle()
-                .frame(width: 30, height: 30)
+            AsyncImage(url: URL(string: coin.image)) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+            } placeholder: {
+                ProgressView()
+            }
+
             
             Text(coin.symbol.uppercased())
                 .font(.headline)

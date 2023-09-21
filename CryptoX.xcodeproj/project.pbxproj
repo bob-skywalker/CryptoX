@@ -20,6 +20,7 @@
 		5CB312C62ABA34D200495292 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312C52ABA34D200495292 /* CircleButtonAnimationView.swift */; };
 		5CB312C92ABA4C9700495292 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312C82ABA4C9700495292 /* CoinModel.swift */; };
 		5CB312CB2ABCC61F00495292 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312CA2ABCC61F00495292 /* HomeViewModel.swift */; };
+		5CB312CE2ABCDC2F00495292 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312CD2ABCDC2F00495292 /* CoinDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		5CB312C52ABA34D200495292 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		5CB312C82ABA4C9700495292 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		5CB312CA2ABCC61F00495292 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5CB312CD2ABCDC2F00495292 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		5CB312A92ABA209100495292 /* CryptoX */ = {
 			isa = PBXGroup;
 			children = (
+				5CB312CC2ABCDBF700495292 /* Services */,
 				5CB312C72ABA4C7B00495292 /* Models */,
 				5CB312BB2ABA2E8200495292 /* Core */,
 				5CB312B82ABA238D00495292 /* Extensions */,
@@ -158,6 +161,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5CB312CC2ABCDBF700495292 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5CB312CD2ABCDC2F00495292 /* CoinDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB312CE2ABCDC2F00495292 /* CoinDataService.swift in Sources */,
 				5C4B31282ABA707600118033 /* CoinRowView.swift in Sources */,
 				5CB312CB2ABCC61F00495292 /* HomeViewModel.swift in Sources */,
 				5CB312AD2ABA209100495292 /* ContentView.swift in Sources */,
