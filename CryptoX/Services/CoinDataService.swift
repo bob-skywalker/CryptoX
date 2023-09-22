@@ -24,24 +24,9 @@ class CoinDataService: ObservableObject {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-        coinSubscription = URLSession.shared.dataTaskPublisher(for: urlString)
-            .subscribe(on: DispatchQueue.global(qos: .default))
-            .tryMap { (data, response) in
-                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    throw URLError(.badServerResponse)
-                }
-                return data
-            }
-            .receive(on: DispatchQueue.main)
+        coinSubscription = NetworkManager.download(url: urlString)
             .decode(type: [CoinModel].self, decoder: decoder)
-            .sink(receiveCompletion: { completion in
-                switch completion{
-                case .failure(let error):
-                    print("Error: \(error.localizedDescription)")
-                case .finished:
-                    break
-                }
-            }, receiveValue: {[weak self] receivedItems in
+            .sink(receiveCompletion: NetworkManager.handleCompletion, receiveValue: { [weak self] receivedItems in 
                 self?.allCoins = receivedItems
                 self?.coinSubscription?.cancel()
             })
