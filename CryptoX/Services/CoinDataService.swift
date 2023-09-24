@@ -10,7 +10,7 @@ import Combine
 
 
 class CoinDataService: ObservableObject {
-    var coinSubscription: AnyCancellable?
+    private var coinSubscription: AnyCancellable?
     
     @Published var allCoins: [CoinModel] = []
     

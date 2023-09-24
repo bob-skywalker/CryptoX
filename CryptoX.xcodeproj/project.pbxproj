@@ -23,6 +23,9 @@
 		5CB312CE2ABCDC2F00495292 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312CD2ABCDC2F00495292 /* CoinDataService.swift */; };
 		5CB312D12ABCE42F00495292 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5CB312D02ABCE42F00495292 /* Kingfisher */; };
 		5CB312D42ABE21FA00495292 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312D32ABE21FA00495292 /* NetworkManager.swift */; };
+		5CB312D72AC0BE8200495292 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312D62AC0BE8200495292 /* CoinImageView.swift */; };
+		5CB312D92AC0C0C900495292 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312D82AC0C0C900495292 /* CoinImageService.swift */; };
+		5CB312DB2AC0C33D00495292 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB312DA2AC0C33D00495292 /* CoinImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		5CB312CA2ABCC61F00495292 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5CB312CD2ABCDC2F00495292 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		5CB312D32ABE21FA00495292 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5CB312D62AC0BE8200495292 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		5CB312D82AC0C0C900495292 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
+		5CB312DA2AC0C33D00495292 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 		5CB312C12ABA2FDD00495292 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5CB312D52AC0BE6E00495292 /* CoinImage */,
 				5CB312C22ABA2FF400495292 /* CircleButtons */,
 			);
 			path = Components;
@@ -170,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				5CB312CD2ABCDC2F00495292 /* CoinDataService.swift */,
+				5CB312D82AC0C0C900495292 /* CoinImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -180,6 +188,15 @@
 				5CB312D32ABE21FA00495292 /* NetworkManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5CB312D52AC0BE6E00495292 /* CoinImage */ = {
+			isa = PBXGroup;
+			children = (
+				5CB312D62AC0BE8200495292 /* CoinImageView.swift */,
+				5CB312DA2AC0C33D00495292 /* CoinImageViewModel.swift */,
+			);
+			path = CoinImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,13 +280,16 @@
 				5CB312CB2ABCC61F00495292 /* HomeViewModel.swift in Sources */,
 				5CB312D42ABE21FA00495292 /* NetworkManager.swift in Sources */,
 				5CB312AD2ABA209100495292 /* ContentView.swift in Sources */,
+				5CB312D72AC0BE8200495292 /* CoinImageView.swift in Sources */,
 				5CB312C02ABA2EAE00495292 /* HomeView.swift in Sources */,
 				5CB312AB2ABA209100495292 /* CryptoXApp.swift in Sources */,
 				5CB312C42ABA300500495292 /* CircleButtonView.swift in Sources */,
 				5CB312BA2ABA239D00495292 /* Color.swift in Sources */,
 				5CB312C62ABA34D200495292 /* CircleButtonAnimationView.swift in Sources */,
+				5CB312DB2AC0C33D00495292 /* CoinImageViewModel.swift in Sources */,
 				5C4B312A2ABA70D900118033 /* PreviewProvider.swift in Sources */,
 				5C4B312C2ABA740000118033 /* Double.swift in Sources */,
+				5CB312D92AC0C0C900495292 /* CoinImageService.swift in Sources */,
 				5CB312C92ABA4C9700495292 /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
