@@ -23,10 +23,6 @@ class CoinImageService{
     
     private func getCoinImage(){
         guard let urlString = URL(string: coin.image) else { return }
-        
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        
         imageSubscription = NetworkManager.download(url: urlString)
             .tryMap({ (data) -> UIImage? in
                 return UIImage(data: data)
@@ -37,7 +33,4 @@ class CoinImageService{
             })
     }
     
-    private func addSubscribers(){
-        
-    }
 }
