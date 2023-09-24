@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Kingfisher
+//import Kingfisher
 
 struct HomeView: View {
     @EnvironmentObject private var homeViewModel: HomeViewModel
