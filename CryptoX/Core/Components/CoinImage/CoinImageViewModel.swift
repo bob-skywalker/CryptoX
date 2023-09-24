@@ -11,7 +11,7 @@ import SwiftUI
 
 class CoinImageViewModel: ObservableObject {
     @Published var image: UIImage? = nil
-    @Published var isLoading: Bool = false
+    @Published var isLoading: Bool
     
     private let coin: CoinModel
     private let dataService: CoinImageService
@@ -20,8 +20,8 @@ class CoinImageViewModel: ObservableObject {
     init(coin: CoinModel) {
         self.coin = coin
         self.dataService = CoinImageService(coin: coin)
-        self.addSubscriber()
         self.isLoading = true
+        self.addSubscriber()
     }
     
     private func addSubscriber(){
