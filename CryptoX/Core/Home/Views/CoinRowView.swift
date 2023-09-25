@@ -53,14 +53,20 @@ extension CoinRowView {
                 .frame(minWidth: 30)
             
 //            will use KingFisher instead for local image caching
-            AsyncImage(url: URL(string: coin.image)) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
-            } placeholder: {
-                ProgressView()
-            }
+//            AsyncImage(url: URL(string: coin.image)) { image in
+//                image
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 30, height: 30)
+//            } placeholder: {
+//                ProgressView()
+//            }
+            
+            KFImage(URL(string: coin.image))
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30)
+            
 
             
             Text(coin.symbol.uppercased())
