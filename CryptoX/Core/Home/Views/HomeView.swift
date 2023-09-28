@@ -24,6 +24,8 @@ struct HomeView: View {
                 // reusable homeHeader (Extension to HomeView)
                 homeHeader
                 
+                SearchBarView(searchText: $homeViewModel.searchText)
+                
                 columnTitles
                 
                 if !showPortfolio {
